@@ -44,6 +44,10 @@ function loadrc(name, mod)
 end
 -- }}}
 
+-- {{{ Make sure that cache directory exists
+os.execute("test -d " .. awful.util.getdir("cache") ..
+            " || mkdir -p " .. awful.util.getdir("cache"))
+-- }}}
 
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
