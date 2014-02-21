@@ -269,7 +269,11 @@ globalkeys = awful.util.table.join(
                   awful.util.getdir("cache") .. "/history_eval")
               end),
     -- Menubar
-    awful.key({ modkey }, "p", function() menubar.show() end)
+    awful.key({ modkey }, "p", function() menubar.show() end),
+
+    -- Personal keybindings
+    awful.key({ "Control" }, "k", function () awful.util.spawn("keepassx") end),
+    awful.key({ "Control" }, "l", function () awful.util.spawn("xtrlock") end)
 )
 
 clientkeys = awful.util.table.join(
