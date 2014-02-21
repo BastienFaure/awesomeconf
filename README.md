@@ -1,0 +1,4 @@
+awesomeconf
+===========
+
+My Awesome configuration
