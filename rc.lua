@@ -1,15 +1,15 @@
 -- Standard awesome library
-local gears = require("gears")
-local awful = require("awful")
+gears = require("gears")
+awful = require("awful")
 awful.rules = require("awful.rules")
 require("awful.autofocus")
 -- Widget and layout library
-local wibox = require("wibox")
+wibox = require("wibox")
 -- Theme handling library
-local beautiful = require("beautiful")
+beautiful = require("beautiful")
 -- Notification library
-local naughty = require("naughty")
-local menubar = require("menubar")
+naughty = require("naughty")
+menubar = require("menubar")
 
 -- {{{ Simple function to load additional LUA files from rc/.
 function loadrc(name, mod)
@@ -67,7 +67,7 @@ editor_cmd = terminal .. " -e " .. editor
 modkey = "Mod4"
 
 -- Table of layouts to cover with awful.layout.inc, order matters.
-local layouts =
+layouts =
 {
     awful.layout.suit.floating,
     awful.layout.suit.tile,
@@ -84,15 +84,8 @@ local layouts =
 }
 -- }}}
 
-
--- {{{ Tags
--- Define a tag table which hold all screen tags.
-tags = {}
-for s = 1, screen.count() do
-    -- Each screen has its own tag table.
-    tags[s] = awful.tag({ 1, 2, 3, 4, 5, 6, 7, 8, 9 }, s, layouts[1])
-end
--- }}}
+loadrc("wallpaper")
+loadrc("tags")
 
 -- {{{ Menu
 -- Create a laucher widget and a main menu
