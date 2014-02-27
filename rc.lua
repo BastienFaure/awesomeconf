@@ -59,8 +59,8 @@ terminal = "urxvt256c"
 editor = os.getenv("EDITOR") or "vim"
 editor_cmd = terminal .. " -e " .. editor
 
--- Xcompmgr for transparency
-os.execute("xcompmgr -cF &")
+-- Programs to run on start
+loadrc("start")
 
 -- Default modkey.
 -- Usually, Mod4 is the key with a logo between Control and Alt.
