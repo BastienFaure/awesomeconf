@@ -1,9 +1,4 @@
 -- {{{ Rules
-if screen.count() > 1 then
-    auxiliary_screen = 2
-else
-    auxiliary_screen = 1
-end
 
 awful.rules.rules = {
     -- All clients will match this rule.
@@ -20,11 +15,11 @@ awful.rules.rules = {
     { rule = { class = "gimp" },
       properties = { floating = true } },
     { rule = { class = "Gajim" },
-      properties = { tag = tags[auxiliary_screen][11] } },
+      properties = { tag = tags[1][11] } },
     { rule = { class = "Thunderbird" },
-      properties = { tag = tags[auxiliary_screen][8] } },
+      properties = { tag = tags[1][8] } },
     { rule = { class = "Skype" },
-      properties = { tag = tags[auxiliary_screen][10] } },
+      properties = { tag = tags[1][8] } },
     -- Set Firefox to always map on tags number 2 of screen 1.
     -- { rule = { class = "Firefox" },
     --  properties = { tag = tags[1][2] } },
