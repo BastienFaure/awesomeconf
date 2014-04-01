@@ -71,8 +71,10 @@ globalkeys = awful.util.table.join(
     awful.key({ "Control" }, "k", function () awful.util.spawn("keepassx") end),
     awful.key({ "Control" }, "l", function () awful.util.spawn("xtrlock") end),
     awful.key({ modkey    }, "b", function () awful.util.spawn("google-chrome-stable") end),
-    awful.key({ modkey    }, "f", function () awful.util.spawn("nautilus") end)
-    
+    awful.key({ modkey    }, "f", function () awful.util.spawn("nautilus") end),
+    awful.key({ }, "XF86AudioRaiseVolume", function ()  awful.util.spawn("amixer set Master 9%+") end),
+    awful.key({ }, "XF86AudioLowerVolume", function () awful.util.spawn("amixer set Master 9%-") end),
+    awful.key({ }, "XF86AudioMute", function () awful.util.spawn("amixer sset Master toggle") end)
 )
 
 clientkeys = awful.util.table.join(
