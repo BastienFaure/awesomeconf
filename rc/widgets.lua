@@ -75,8 +75,8 @@ cpuwidget:set_color({
 -- Register widget
 vicious.register(netwidget, vicious.widgets.net, '<span color="#CC9393">${p3p1 down_kb}</span> <span color="#7F9F7F">${p3p1 up_kb}</span>', 3)
 update_volume(volume_widget)
-vicious.register(memwidget, vicious.widgets.mem, "$1", 13)
-vicious.register(cpuwidget, vicious.widgets.cpu, "$1")
+vicious.register(memwidget, vicious.widgets.mem, "$1", 1)
+vicious.register(cpuwidget, vicious.widgets.cpu, "$1", 1)
 
 -- Create a wibox for each screen and add it
 mywibox = {}
