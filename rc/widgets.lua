@@ -5,42 +5,14 @@
 
 -- netwidget
 netwidget = wibox.widget.textbox()
+
 -- separator
 separator = wibox.widget.textbox()
 separator:set_text(" :: ")
 
--- volume widget
---volume_widget = wibox.widget.textbox()
---volume_widget:set_align("right")
---
---function update_volume(widget)
---   local fd = io.popen("amixer sget Master")
---   local status = fd:read("*all")
---   fd:close()
---
---   -- local volume = tonumber(string.match(status, "(%d?%d?%d)%%")) / 100
---   local volume = string.match(status, "(%d?%d?%d)%%")
---   volume = string.format("% 3d", volume)
---
---   status = string.match(status, "%[(o[^%]]*)%]")
---
---   if string.find(status, "on", 1, true) then
---       -- For the volume numbers
---       volume = volume .. "%"
---   else
---       -- For the mute button
---       volume = volume .. "M"
---
---   end
---   widget:set_markup(volume)
---end
---
---mytimer = timer({ timeout = 1 })
---mytimer:connect_signal("timeout", function () update_volume(volume_widget) end)
---mytimer:start()
-
 -- clock
 mytextclock = awful.widget.textclock()
+
 -- memory
 memwidget = awful.widget.progressbar()
 memwidget:set_width(8)
@@ -76,7 +48,6 @@ cpuwidget:set_color({
 
 -- Register widget
 vicious.register(netwidget, vicious.widgets.net, '<span color="#CC9393">${enp8s0 down_kb}</span> <span color="#7F9F7F">${enp8s0 up_kb}</span>', 3)
-update_volume(volume_widget)
 vicious.register(memwidget, vicious.widgets.mem, "$1", 1)
 vicious.register(cpuwidget, vicious.widgets.cpu, "$1", 1)
 
@@ -162,7 +133,6 @@ for s = 1, screen.count() do
     right_layout:add(separator)
     right_layout:add(memwidget)
     right_layout:add(separator)
-    right_layout:add(volume_widget)
     if s == 1 then right_layout:add(wibox.widget.systray()) end
     right_layout:add(mytextclock)
     right_layout:add(mylayoutbox[s])
