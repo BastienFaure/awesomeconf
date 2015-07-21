@@ -73,6 +73,7 @@ globalkeys = awful.util.table.join(
     awful.key({ "Control" }, "s", function () awful.util.spawn("shutter -s") end),
     awful.key({ modkey    }, "b", function () awful.util.spawn("google-chrome-stable") end),
     awful.key({ modkey    }, "f", function () awful.util.spawn("nautilus") end),
+    awful.key({ "Control" }, "p", function () awful.util.spawn("aplay .config/awesome/sounds/tu_peses.wav") end),
     awful.key({ }, "XF86AudioRaiseVolume", function ()  awful.util.spawn("amixer set Master 9%+") end),
     awful.key({ }, "XF86AudioLowerVolume", function () awful.util.spawn("amixer set Master 9%-") end),
     awful.key({ }, "XF86AudioMute", function () awful.util.spawn("amixer sset Master toggle") end)
