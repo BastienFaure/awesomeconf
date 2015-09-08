@@ -73,7 +73,12 @@ globalkeys = awful.util.table.join(
     awful.key({ "Control" }, "s", function () awful.util.spawn("shutter -s") end),
     awful.key({ modkey    }, "b", function () awful.util.spawn("google-chrome-stable") end),
     awful.key({ modkey    }, "f", function () awful.util.spawn("nautilus") end),
-    awful.key({ "Control" }, "p", function () awful.util.spawn("aplay .config/awesome/sounds/tu_peses.wav") end),
+    awful.key({ modkey    }, "KP_End", function () awful.util.spawn("aplay .config/awesome/sounds/tu_peses.wav") end),
+    awful.key({ modkey    }, "KP_Down", function () awful.util.spawn("aplay .config/awesome/sounds/berniste.wav") end),
+    awful.key({ modkey    }, "KP_Next", function () awful.util.spawn("aplay .config/awesome/sounds/trop_bon.wav") end),
+    awful.key({ modkey    }, "KP_Left", function () awful.util.spawn("aplay .config/awesome/sounds/ahah.wav") end),
+    awful.key({ modkey    }, "KP_Right", function () awful.util.spawn("aplay .config/awesome/sounds/misterv.wav") end),
+    awful.key({ modkey    }, "KP_Up", function () awful.util.spawn("aplay .config/awesome/sounds/lance_flammes.wav") end),
     awful.key({ }, "XF86AudioRaiseVolume", function ()  awful.util.spawn("amixer set Master 9%+") end),
     awful.key({ }, "XF86AudioLowerVolume", function () awful.util.spawn("amixer set Master 9%-") end),
     awful.key({ }, "XF86AudioMute", function () awful.util.spawn("amixer sset Master toggle") end)
