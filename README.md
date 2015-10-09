@@ -1,7 +1,7 @@
 awesomeconf
 ===========
 
-My Awesome configuration
+My Awesome configuration, this one is using the famous vicious library.
 
 Install
 =======
