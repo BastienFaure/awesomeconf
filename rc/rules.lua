@@ -21,6 +21,8 @@ awful.rules.rules = {
       properties = { floating = true } },
     { rule = { class = "Gajim" },
       properties = { tag = tags[1][11] } },
+    { rule = { class = "Icedove" },
+      properties = { tag = tags[1][8] } },
     { rule = { class = "Thunderbird" },
       properties = { tag = tags[1][8] } },
     { rule = { class = "Skype" },

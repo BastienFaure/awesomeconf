@@ -20,7 +20,7 @@ memwidget:set_height(10)
 memwidget:set_vertical(true)
 memwidget:set_background_color("#494B4F")
 memwidget:set_border_color(nil)
-memwidget:set_color({ 
+memwidget:set_color({
                         type = "linear",
                         from = {0,0},
                         to = { 10,0 },
@@ -35,19 +35,28 @@ memwidget:set_color({
 cpuwidget = awful.widget.graph()
 cpuwidget:set_width(50)
 cpuwidget:set_background_color("#494B4F")
-cpuwidget:set_color({ 
+cpuwidget:set_color({
                         type = "linear",
                         from = { 0, 0 },
                         to = { 10,0 },
-                        stops = { 
+                        stops = {
                                     {0, "#FF5656"},
                                     {0.5, "#88A175"},
                                     {1, "#AECF96" }
                         }
 })
 
--- Register widget
+-- battery
+batwidget = wibox.widget.textbox()
+
+-- temp
+tempwidget = wibox.widget.textbox()
+
+
+-- Register widgets
 vicious.register(netwidget, vicious.widgets.net, '<span color="#CC9393">${enp8s0 down_kb}</span> <span color="#7F9F7F">${enp8s0 up_kb}</span>', 3)
+vicious.register(batwidget,vicious.widgets.bat, 'Power: <span color="#3232ff">$1 $2% $3</span>', 60, "BAT0")
+vicious.register(tempwidget, vicious.widgets.thermal, "Temp: <span color='#d7e0ea'>$1°С</span>",37,"thermal_zone0")
 vicious.register(memwidget, vicious.widgets.mem, "$1", 1)
 vicious.register(cpuwidget, vicious.widgets.cpu, "$1", 1)
 
@@ -128,6 +137,10 @@ for s = 1, screen.count() do
     -- Widgets that are aligned to the right
     local right_layout = wibox.layout.fixed.horizontal()
     right_layout:add(netwidget)
+    right_layout:add(separator)
+    right_layout:add(batwidget)
+    right_layout:add(separator)
+    right_layout:add(tempwidget)
     right_layout:add(separator)
     right_layout:add(cpuwidget)
     right_layout:add(separator)
