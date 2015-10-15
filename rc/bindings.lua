@@ -69,7 +69,7 @@ globalkeys = awful.util.table.join(
 
     -- Personal keybindings
     awful.key({ "Control" }, "k", function () awful.util.spawn("keepassx") end),
-    awful.key({ "Control" }, "l", function () awful.util.spawn("xtrlock") end),
+    awful.key({ "Control" }, "l", function () awful.util.spawn("slock") end),
     awful.key({ "Control" }, "s", function () awful.util.spawn("shutter -s") end),
     awful.key({ modkey    }, "b", function () awful.util.spawn("google-chrome-stable") end),
     awful.key({ modkey    }, "f", function () awful.util.spawn("nautilus") end),
