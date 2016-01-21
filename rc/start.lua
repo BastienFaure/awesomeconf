@@ -1,4 +1,4 @@
-os.execute("command -v xcompmgr >/dev/null 2>&1 && xcompmgr -cf &")
+-- os.execute("command -v xcompmgr >/dev/null 2>&1 && xcompmgr -cf &")
 os.execute("command -v dropbox >/dev/null 2>&1 && dropbox start")
 os.execute("command -v thunderbird >/dev/null 2>&1 && thunderbird &")
 os.execute("command -v icedove >/dev/null 2>&1 && icedove &")
