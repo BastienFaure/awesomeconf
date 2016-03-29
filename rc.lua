@@ -65,9 +65,15 @@ os.execute("test -d " .. awful.util.getdir("cache") ..
 
 
 -- {{{ Variable definitions
+config = {}
 -- Themes define colours, icons, and wallpapers
+config.hostname = awful.util.pread('uname -n'):gsub('\n', '')
 beautiful.init("/usr/share/awesome/themes/default/theme.lua")
-theme.wallpaper = awful.util.getdir("config") .. "/pictures/swag.png"
+if config.hostname == "factory" then
+	theme.wallpaper = awful.util.getdir("config") .. "/pictures/synacktiv_wallpaper.png"
+else
+	theme.wallpaper = awful.util.getdir("config") .. "/pictures/swag.png"
+end
 
 -- This is used later as the default terminal and editor to run.
 terminal = "gnome-terminal"
