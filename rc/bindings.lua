@@ -8,7 +8,7 @@ root.buttons(awful.util.table.join(
 
 -- {{{ Key bindings
 globalkeys = awful.util.table.join(
-	awful.key({ modkey    }, "s", function () awful.util.spawn("/home/marauder/.config/fish/bin/jarvis screenshot") end),
+	awful.key({ modkey    }, "s", function () awful.util.spawn("pentest screenshot") end),
     awful.key({ modkey,           }, "Left",   awful.tag.viewprev,
               {description = "view previous", group = "tag"}),
     awful.key({ modkey,           }, "Right",  awful.tag.viewnext,
@@ -109,7 +109,7 @@ globalkeys = awful.util.table.join(
     awful.key({ "Control", "Shift" }, "k", function () awful.util.spawn("keepassx") end),
     awful.key({ "Control" }, "l", function () awful.util.spawn("slock") end),
     awful.key({ "Control", "Shift" }, "l", function () awful.util.spawn("xtrlock") end),
-    awful.key({ modkey    }, "s", function () awful.util.spawn("/home/marauder/.config/fish/bin/jarvis screenshot") end),
+    awful.key({ modkey    }, "s", function () awful.util.spawn("pentest screenshot") end),
     awful.key({ modkey    }, "b", function () awful.util.spawn("google-chrome-stable") end),
     awful.key({ modkey    }, "f", function () awful.util.spawn("nautilus") end),
     awful.key({ modkey    }, "KP_End", function () awful.util.spawn("aplay .config/awesome/sounds/tu_peses.wav") end),
