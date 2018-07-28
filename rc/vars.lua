@@ -5,14 +5,14 @@ theme = beautiful.init(awful.util.get_themes_dir() .. "zenburn/theme.lua")
 -- CUSTOM
 config = {}
 config.hostname = os.capture('uname -n')
-if config.hostname == "factory" then
-	beautiful.wallpaper = awful.util.getdir("config") .. "/pictures/synacktiv_wallpaper.png"
+if config.hostname == "factory.bishopfox" then
+	beautiful.wallpaper = awful.util.getdir("config") .. "/pictures/bishopfox.png"
 else
 	beautiful.wallpaper = awful.util.getdir("config") .. "/pictures/swag.png"
 end
 
 -- This is used later as the default terminal and editor to run.
-terminal = "x-terminal-emulator"
+terminal = "gnome-terminal"
 editor = os.getenv("EDITOR") or "editor"
 editor_cmd = terminal .. " -e " .. editor
 

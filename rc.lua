@@ -13,7 +13,7 @@ menubar = require("menubar")
 hotkeys_popup = require("awful.hotkeys_popup").widget
 
 -- Load Debian menu entries
-require("debian.menu")
+-- require("debian.menu")
 
 
 -- {{{ Simple function to load additional LUA files from rc/.

@@ -50,18 +50,14 @@ awful.rules.rules = {
       properties = { floating = true } },
     { rule = { class = "gimp" },
       properties = { floating = true } },
-    { rule = { class = "Gajim" },
-      properties = { screen = 1, tag = "jabber" } },
     { rule = { class = "Icedove" },
       properties = { screen = 1, tag = "mail" } },
     { rule = { class = "Thunderbird" },
       properties = { screen = 1, tag = "mail" } },
     { rule = { class = "Skype" },
       properties = { screen = 1, tag = "skype" } },
-    { rule = { class = "Pidgin" },
-      properties = { screen = 1, tag = "jabber" } },
-    { rule = { class = "irssi" },
-      properties = { screen = 1, tag = "social" } }
+    { rule = { class = "Seafile" },
+      properties = { screen = 1, tag = "seafile" } }
 
     -- Set Firefox to always map on the tag named "2" on screen 1.
     -- { rule = { class = "Firefox" },
