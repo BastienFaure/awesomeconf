@@ -1,4 +1,6 @@
 os.execute("command -v xcompmgr >/dev/null 2>&1 && xcompmgr -cf &")
+os.execute("command -v teams >/dev/null 2>&1 && teams")
+os.execute("command -v slack >/dev/null 2>&1 && slack &")
 os.execute("command -v dropbox >/dev/null 2>&1 && dropbox start")
 os.execute("command -v seafile-applet >/dev/null 2>&1 && seafile-applet &")
 os.execute("command -v thunderbird >/dev/null 2>&1 && thunderbird &")

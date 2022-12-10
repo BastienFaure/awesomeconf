@@ -50,12 +50,12 @@ awful.rules.rules = {
       properties = { floating = true } },
     { rule = { class = "gimp" },
       properties = { floating = true } },
-    { rule = { class = "Icedove" },
-      properties = { screen = 1, tag = "mail" } },
     { rule = { class = "Thunderbird" },
       properties = { screen = 1, tag = "mail" } },
-    { rule = { class = "Skype" },
-      properties = { screen = 1, tag = "skype" } },
+    { rule = { class = "Teams" },
+      properties = { screen = 1, tag = "teams" } },
+    { rule = { class = "Slack" },
+      properties = { screen = 1, tag = "slack" } },
     { rule = { class = "Seafile" },
       properties = { screen = 1, tag = "seafile" } }
 
